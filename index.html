@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Yayis! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sobre de bienvenida -->
+    <div class="envelope-overlay" id="envelopeOverlay">
+        <div class="envelope" onclick="openEnvelope()">
+            <div class="envelope-front">
+                <p class="envelope-text">Para ti 💌</p>
+            </div>
+            <div class="envelope-flap"></div>
+        </div>
+        <p class="click-instruction">Haz clic en el sobre</p>
+    </div>
+
+    <div class="container" id="mainContainer">
+        <!-- Confeti -->
+        <div class="confetti-container" id="confettiContainer"></div>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <h1 class="title">¡FELIZ CUMPLEAÑOS!</h1>
+            <p class="subtitle">A la persona más especial, mi hermanita la yayis</p>
+            
+            <!-- Imagen -->
+            <div class="image-container">
+                <img src="img/yayis.jpg" alt="Yayis" class="birthday-image" onclick="playAudioOnClick()">
+            </div>
+            
+            <div class="birthday-card">
+                <div class="number">19</div>
+                <p class="message">Hoy es tu día especial</p>
+            </div>
+
+            <!-- Globos -->
+            <div class="balloons">
+                <div class="balloon balloon-1">🎈</div>
+                <div class="balloon balloon-2">🎈</div>
+                <div class="balloon balloon-3">🎈</div>
+                <div class="balloon balloon-4">🎈</div>
+                <div class="balloon balloon-5">🎈</div>
+            </div>
+
+            <!-- Mensajes -->
+            <div class="messages">
+                <div class="message-box special-message">
+                    <p> ¡Feliz cumpleaños a la hermana más especial del mundo! </p>
+                </div>
+                <div class="message-box">
+                    <p> Que este día esté lleno de alegría y sonrisas</p>
+                </div>
+                <div class="message-box">
+                    <p> Te deseo que todos tus sueños se hagan realidad</p>
+                </div>
+                <div class="message-box">
+                    <p> Que los 19 años te traigan momentos inolvidables</p>
+                </div>
+                <div class="message-box">
+                    <p> Este es tu día para brillar y ser el centro de atención </p>
+                </div>
+            </div>
+
+            <!-- Velas interactivas -->
+            <div class="candles">
+                <div class="candle" onclick="extinguishCandle(this)">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle" onclick="extinguishCandle(this)">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle" onclick="extinguishCandle(this)">
+                    <div class="flame"></div>
+                </div>
+            </div>
+
+            <!-- Audio -->
+            <div class="audio-container">
+                <audio id="birthdayAudio" autoplay loop muted>
+                    <source src="audio/audio.mp3" type="audio/mpeg">
+                    Tu navegador no soporta audio HTML5.
+                </audio>
+                <button class="btn btn-audio" onclick="toggleAudio()">🔊 Música ON/OFF</button>
+            </div>
+        </div>
+
+        <!-- Sorpresa oculta -->
+        <div class="surprise" id="surprise">
+            <div class="surprise-content">
+                <h2> ¡SORPRESA! </h2>
+                <p>Espero que disfrutes mucho tu día especial!</p>
+                <p>¡A disfrutar de esta etapa maravillosa de los 19!</p>
+                <button class="close-btn" onclick="closeSurprise()">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
